@@ -10,7 +10,7 @@
 sudo pacman -S nano htop
 
 # VS Code
-sudo pacman -S vscode
+yay -S visual-studio-code-bin
 
 # Firefox
 yay -S firefox
@@ -18,9 +18,18 @@ yay -S firefox
 # Ghostty
 yay -S ghostty
 
+# Discord
+yay -S discord
+
 # Tailscale
 curl -fsSL https://tailscale.com/install.sh | sh
 ```
+
+## Setup Keyring
+
+1Password and VS Code's sync system require this to be setup.
+
+https://github.com/basecamp/omarchy/issues/73#issuecomment-3052709335
 
 ## Remove Apps
 
