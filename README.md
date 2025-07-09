@@ -17,12 +17,16 @@ yay -S firefox
 
 # Ghostty
 yay -S ghostty
+
+# Tailscale
+curl -fsSL https://tailscale.com/install.sh | sh
 ```
 
 ## Remove Apps
 
 ```
 yay -Rns zoom
+yay -Rns signal-desktop
 ```
 
 ## Edit Hyprland Config
