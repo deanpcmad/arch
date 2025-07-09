@@ -10,19 +10,24 @@
 sudo pacman -S nano htop
 
 # VS Code
-yay -S visual-studio-code-bin
+yay -S --noconfirm visual-studio-code-bin
 
-# Firefox
-yay -S firefox
+# Extras
+yay -S firefox ghostty discord
 
-# Ghostty
-yay -S ghostty
-
-# Discord
-yay -S discord
+# Allow SMB locations on Nautilus
+yay -S gvfs-smb
 
 # Tailscale
 curl -fsSL https://tailscale.com/install.sh | sh
+```
+
+## Change Default Browser
+
+```
+xdg-settings set default-web-browser firefox.desktop
+xdg-mime default firefox.desktop x-scheme-handler/http
+xdg-mime default firefox.desktop x-scheme-handler/https
 ```
 
 ## Setup Keyring
@@ -47,8 +52,3 @@ code ~/.config/hypr
 - Edit `monitors.conf` to set the resolution and refresh rate.
 - Edit `hyprland.conf` to change the `GDK_SCALE` to 1 and change `kb_layout` to gb. Also enable `natural_scroll` when on a laptop.
 
-## Allow SMB locations on Nautilus
-
-```
-sudo pacman -S gvfs-smb
-```
