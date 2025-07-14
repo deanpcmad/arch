@@ -74,6 +74,5 @@ monitor = eDP-1, 1920x1080@60.00, auto, 1
 ## Remove Apps
 
 ```
-yay -Rns zoom
-yay -Rns signal-desktop
+yay -Rns zoom signal-desktop dropbox dropbox-cli
 ```
