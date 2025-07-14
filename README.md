@@ -34,13 +34,11 @@ xdg-mime default firefox.desktop x-scheme-handler/https
 
 1Password and VS Code's sync system require this to be setup.
 
-https://github.com/basecamp/omarchy/issues/73#issuecomment-3052709335
-
-## Remove Apps
-
 ```
-yay -Rns zoom
-yay -Rns signal-desktop
+# Test that it works and create a default keyring
+secret-tool store --label="test" testkey testvalue
+secret-tool lookup testkey testvalue
+secret-tool clear testkey testvalue
 ```
 
 ## Edit Hyprland Config
@@ -49,6 +47,33 @@ yay -Rns signal-desktop
 code ~/.config/hypr
 ```
 
-- Edit `monitors.conf` to set the resolution and refresh rate.
-- Edit `hyprland.conf` to change the `GDK_SCALE` to 1 and change `kb_layout` to gb. Also enable `natural_scroll` when on a laptop.
+### hyprland.conf
 
+- Rename the default browser to Firefox and add a chromium option for webapps
+
+```
+$browser = firefox --new-window
+$chromium = chromium --new-window --ozone-platform=wayland
+$webapp = $chromium --app
+```
+
+- Change `GDK_SCALE` to 1 or 2 depending on the display
+- Add `env = XDG_CURRENT_DESKTOP,Hyprland:GNOME` below `GDK_SCALE`
+- Set `kb_layout` to `gb`
+- Enable `natural_scroll` when on a laptop
+
+### monitors.conf
+
+Edit to set the resolution and refresh rate.
+
+```
+# For example
+monitor = eDP-1, 1920x1080@60.00, auto, 1
+```
+
+## Remove Apps
+
+```
+yay -Rns zoom
+yay -Rns signal-desktop
+```
