@@ -41,6 +41,12 @@ secret-tool lookup testkey testvalue
 secret-tool clear testkey testvalue
 ```
 
+## Nextcloud
+
+```
+yay -S nextcloud-client
+```
+
 ## Edit Hyprland Config
 
 ```
@@ -57,6 +63,7 @@ $chromium = chromium --new-window --ozone-platform=wayland
 $webapp = $chromium --app
 ```
 
+- Add `exec-once = nextcloud` so Nextcloud launches on startup
 - Change `GDK_SCALE` to 1 or 2 depending on the display
 - Add `env = XDG_CURRENT_DESKTOP,Hyprland:GNOME` below `GDK_SCALE`
 - Set `kb_layout` to `gb`
