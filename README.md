@@ -20,6 +20,10 @@ yay -S gvfs-smb
 
 # Tailscale
 curl -fsSL https://tailscale.com/install.sh | sh
+
+# Starship
+yay -S starship
+echo 'eval "$(starship init bash)"' >> ~/.bashrc
 ```
 
 ## Change Default Browser
